@@ -13,6 +13,8 @@
         />
         <!-- VUE JS -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <!-- AXIOS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <!-- CSS -->
         <link rel="stylesheet" href="./style/style.css" />
         <title>Document</title>
@@ -29,20 +31,22 @@
             <main>
                 <div class="container small">
                     <div class="row justify-content-center">
-                        <div class="col-3 card mx-4 my-5 py-4">
+                        <div v-for="(cd, index) in cdInfo" :key="`cd-${index}`" class="col-3 card mx-4 my-5 py-4">
                             <div class="text-center">
                                 <div class="pb-4">
-                                    <a href="#"><img src="" alt="" /></a>
+                                    <a href="#"><img :src="cd.poster" :alt="cd.title" /></a>
                                 </div>
-                                <h5>['title']</h5>
-                                <div>['author']</div>
-                                <div>['year']</div>
-                                <div>['genre']</div>
+                                <h5>{{ cd.title }}</h5>
+                                <div>{{ cd.author }}</div>
+                                <div>{{ cd.year }}</div>
+                                <div>{{ cd.genre }}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
+
+        <script src="main.js"></script>
     </body>
 </html>
