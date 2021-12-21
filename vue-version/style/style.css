@@ -1,0 +1,28 @@
+* {
+    color: white;
+}
+
+html body {
+    background-color: #182D3D;
+}
+
+header {
+    height: 80px;
+    background-color: #132431;
+}
+
+.logo {
+    max-width: 45px;
+}
+
+.container.small {
+    width: 55%;
+}
+
+.card {
+    background-color: black;
+}
+
+.card img {
+    width: 70%;
+}
