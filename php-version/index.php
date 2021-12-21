@@ -29,10 +29,10 @@ require_once __DIR__ . '/data/database.php';
                 <?php foreach($database as $data) : ?>
                 <div class="col-3 card mx-4 my-5 py-4">
                     <div class="text-center">
-                        <div class="pb-3">
-                            <img src=" <?php echo $data['poster']; ?>" alt="<?php echo $data['title']; ?>">
+                        <div class="pb-4">
+                            <a href="#"><img src="<?php echo $data['poster']; ?>" alt="<?php echo $data['title']; ?>"></a>
                         </div>
-                        <div><?php echo $data['title']; ?></div>
+                        <h5><?php echo $data['title']; ?></h5>
                         <div><?php echo $data['author']; ?></div>
                         <div><?php echo $data['year']; ?></div>
                         <div><?php echo $data['genre']; ?></div>
